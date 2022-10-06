@@ -39,11 +39,10 @@ const styles = StyleSheet.create({
   },
 
   technologyItem: {
-    backgroundColor: "#000",
-    color: "#fff",
+    backgroundColor: "#ddd",
 
-    paddingHorizontal: "3px",
-    paddingVertical: "1px",
+    paddingHorizontal: "5px",
+    paddingVertical: "3px",
 
     marginRight: "2px",
     marginBottom: "2px",

@@ -8,13 +8,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
 
-  firstSection: {
-    minWidth: "100px",
-  },
-
-  secondSection: {
-    marginTop: "2px",
-    marginLeft: "24px",
+  listContainer: {
+    flex: 1,
   },
 })
 
@@ -22,15 +17,25 @@ const SkillsSection = () => {
   return (
     <Section title="Umiejętności">
       <View style={styles.container}>
-        <View style={styles.firstSection}></View>
-        <View style={styles.secondSection}>
+        <View style={styles.listContainer}>
           <List
             text={[
-              "Komunikatywność i praca w zespole",
-              "Efektywne zarządzanie dokumentacją",
-              "Szybkie rozwiązywanie problemów",
-              "Zarządzanie czasem",
-              "Umiejętność pracy pod presją czasu",
+              "Komunikatywność i praca w zespole,",
+              "Samodzielność i dobre zarządzanie czasem,",
+              "Dobra organizacja pracy,",
+              "Pomysłowość,",
+              "Umiejętność pracy pod presją czasu,",
+            ]}
+          />
+        </View>
+        <View style={styles.listContainer}>
+          <List
+            text={[
+              "Zaangażowanie",
+              "Szybkie rozwiązywanie problemów,",
+              "Zarządzanie dokumentacją,",
+              "Zdolność adaptacji,",
+              "Umiejętność szybkiego uczenia się.",
             ]}
           />
         </View>

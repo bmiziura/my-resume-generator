@@ -6,7 +6,6 @@ import Section from "../components/Section"
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    marginVertical: "4px",
   },
 
   listContainer: {

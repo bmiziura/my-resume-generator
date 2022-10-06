@@ -29,20 +29,15 @@ const styles = StyleSheet.create({
 
     fontFamily: "Open Sans",
     fontSize: "10px",
-  },
-})
 
-export const defaultStyles = StyleSheet.create({
-  link: {
-    color: "#111",
-    textDecoration: "underline 1px",
+    color: "#363d49",
   },
 })
 
 // Create Document Component
 const MyDocument = () => (
   <Document>
-    <Page size="A4" style={styles.page}>
+    <Page size="A4" wrap={false} style={styles.page}>
       <Header />
 
       <ExperienceSection />

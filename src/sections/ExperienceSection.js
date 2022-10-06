@@ -46,7 +46,7 @@ const ExperienceSection = () => {
         <View style={styles.item}>
           <View style={styles.firstSection}>
             <Text style={styles.itemDate}>2020-03 - 2022-09</Text>
-            <Text style={styles.itemDateSmall}>(ponad 2 lata)</Text>
+            <Text style={styles.itemDateSmall}>(2 lata i 7 miesięcy)</Text>
           </View>
           <View style={styles.itemContent}>
             <Text style={styles.itemHeader}>
@@ -59,9 +59,9 @@ const ExperienceSection = () => {
               <List
                 text={[
                   "tworzenie, utrzymywanie i wdrażanie nowych funkcjonalności do aplikacji backendowej napisanej w Javie przy użyciu Springa i innych technologii,",
-                  "zarządzanie serwerami na systemie linux,",
+                  "zarządzanie serwerami na systemie Linux,",
                   "praca w małym zespole,",
-                  "wykorzystywanie kontroli wersji (Git),",
+                  "korzystanie z kontroli wersji (Git),",
                   "oraz korzystanie z bazy danych MongoDB & Redis.",
                 ]}
               />

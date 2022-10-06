@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
 
     marginRight: "4px",
+    color: "#003d74",
   },
 
   text: {
