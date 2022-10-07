@@ -27,7 +27,7 @@ const LanguagesSection = () => {
       <View style={styles.container}>
         <View style={styles.firstSection}></View>
         <View style={styles.secondSection}>
-          <List text={["Angielski - B1"]} />
+          <List text={language.sections.languages.list} />
         </View>
       </View>
     </Section>
