@@ -19,7 +19,7 @@
           "companyName": "SOHP Marcin Szuksztul, Redy-Osada 10-100",
 
           "list": [
-            "creating and adding new features to an existing backend app written in Java with Spring Framework and other technologies,",
+            "creating and adding new features to an existing backend app written in Java, Spring Framework and other technologies,",
             "managing servers with Linux System",
             "working in a small team,",
             "using a version control (Git),",
@@ -58,7 +58,7 @@
       "list": [
         {
           "header": "OLX.pl Clone",
-          "description": "OLX Clone is a web application project written in TypeScript with Next.js (React). ",
+          "description": "OLX Clone is a web application project written in TypeScript and Next.js (React). ",
           "tags": [
             "TypeScript",
             "Next.js (React)",
@@ -71,7 +71,7 @@
         },
         {
           "header": "React Blog with Firebase",
-          "description": "React Blog is a web application project written in TypeScript with React and Firebase.",
+          "description": "React Blog is a web application project written in TypeScript, React and Firebase.",
           "tags": ["TypeScript", "React.js", "Tailwind CSS", "Firebase"],
 
           "demoLink": "https://react-firebase-blog-lyart.vercel.app",
