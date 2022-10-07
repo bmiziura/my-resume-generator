@@ -1,5 +1,6 @@
 import { Link, StyleSheet, Text, View } from "@react-pdf/renderer"
 import React from "react"
+import { useLanguage } from "../MyDocument"
 
 const styles = StyleSheet.create({
   container: {
@@ -37,16 +38,18 @@ const styles = StyleSheet.create({
 })
 
 const HeaderLinks = () => {
+  const { language } = useLanguage()
+
   return (
     <View style={styles.headerLinksContainer}>
       <Text>
-        Portfolio:{" "}
-        <Link src="https://bmiziura.github.io">
-          <Text style={styles.link}>bmiziura.github.io</Text>
+        {language.header.portfolio}
+        <Link src={`https://${language.header.portfolioLink}`}>
+          <Text style={styles.link}>{language.header.portfolioLink}</Text>
         </Link>
       </Text>
-      <Text>Email: bartosz.miziura@o2.pl</Text>
-      <Text>Telefon: +48 695 452 798</Text>
+      <Text>{language.header.email}</Text>
+      <Text>{language.header.phoneNumber}</Text>
     </View>
   )
 }

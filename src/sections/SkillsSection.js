@@ -2,6 +2,7 @@ import { StyleSheet, View } from "@react-pdf/renderer"
 import React from "react"
 import List from "../components/List"
 import Section from "../components/Section"
+import { useLanguage } from "../MyDocument"
 
 const styles = StyleSheet.create({
   container: {
@@ -14,31 +15,16 @@ const styles = StyleSheet.create({
 })
 
 const SkillsSection = () => {
+  const { language } = useLanguage()
+
   return (
-    <Section title="Umiejętności">
+    <Section title={language.sections.skills.header}>
       <View style={styles.container}>
-        <View style={styles.listContainer}>
-          <List
-            text={[
-              "Komunikatywność i praca w zespole,",
-              "Samodzielność i dobre zarządzanie czasem,",
-              "Dobra organizacja pracy,",
-              "Pomysłowość,",
-              "Umiejętność pracy pod presją czasu,",
-            ]}
-          />
-        </View>
-        <View style={styles.listContainer}>
-          <List
-            text={[
-              "Zaangażowanie",
-              "Szybkie rozwiązywanie problemów,",
-              "Zarządzanie dokumentacją,",
-              "Zdolność adaptacji,",
-              "Umiejętność szybkiego uczenia się.",
-            ]}
-          />
-        </View>
+        {language.sections.skills.columns.map((data, index) => (
+          <View style={styles.listContainer} key={index}>
+            <List text={data.skills} />
+          </View>
+        ))}
       </View>
     </Section>
   )

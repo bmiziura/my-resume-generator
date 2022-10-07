@@ -1,5 +1,5 @@
-import { Document, Font, Page, StyleSheet } from "@react-pdf/renderer"
-import React from "react"
+import { Font, Page, StyleSheet } from "@react-pdf/renderer"
+import React, { createContext, useContext } from "react"
 import Header from "./components/Header"
 
 import boldSans from "./fonts/OpenSans-Bold.ttf"
@@ -34,19 +34,27 @@ const styles = StyleSheet.create({
   },
 })
 
-// Create Document Component
-const MyDocument = () => (
-  <Document>
-    <Page size="A4" wrap={false} style={styles.page}>
-      <Header />
+const LanguageContext = createContext({})
 
-      <ExperienceSection />
-      <TechnologiesSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <LanguagesSection />
-    </Page>
-  </Document>
-)
+export const useLanguage = () => {
+  return useContext(LanguageContext)
+}
+
+// Create Document Component
+const MyDocument = ({ language }) => {
+  return (
+    <LanguageContext.Provider value={{ language }}>
+      <Page size="A4" wrap={false} style={styles.page}>
+        <Header />
+
+        <ExperienceSection />
+        <TechnologiesSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <LanguagesSection />
+      </Page>
+    </LanguageContext.Provider>
+  )
+}
 
 export default MyDocument

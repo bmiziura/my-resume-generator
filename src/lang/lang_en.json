@@ -1,0 +1,112 @@
+{
+  "header": {
+    "portfolio": "Portfolio: ",
+    "portfolioLink": "bmiziura.github.io",
+    "email": "Email: bartosz.miziura@o2.pl",
+    "phoneNumber": "Phone Number: +48 695 452 798"
+  },
+
+  "sections": {
+    "experience": {
+      "header": "Experience",
+
+      "list": [
+        {
+          "date": "2020-03 - 2022-09",
+          "dateStamp": "(2 years and 7 months)",
+
+          "header": "Java Developer and Linux Server Management",
+          "companyName": "SOHP Marcin Szuksztul, Redy-Osada 10-100",
+
+          "list": [
+            "creating and adding new features to an existing backend app written in Java with Spring Framework and other technologies,",
+            "managing servers with Linux System",
+            "working in a small team,",
+            "using a version control (Git),",
+            "and using MongoDB & Redis Database."
+          ]
+        }
+      ]
+    },
+    "technologies": {
+      "header": "Technologies / Frameworks",
+
+      "columns": [
+        {
+          "header": "Front-End",
+          "list": [
+            "React (Next.js)",
+            "JavaScript / TypeScript",
+            "HTML",
+            "CSS / Tailwind CSS"
+          ]
+        },
+        {
+          "header": "Backend-End",
+          "list": [
+            "Java",
+            "Spring (Rest-Api, Data, Security)",
+            "Maven / Gradle",
+            "Databases: MySQL, MongoDB and Redis"
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "header": "My Projects",
+
+      "list": [
+        {
+          "header": "OLX.pl Clone",
+          "description": "OLX Clone is a web application project written in TypeScript with Next.js (React). ",
+          "tags": [
+            "TypeScript",
+            "Next.js (React)",
+            "Tailwind CSS",
+            "tRPC",
+            "Prisma"
+          ],
+          "demoLink": "https://olx-clone-nextjs.vercel.app",
+          "githubLink": "https://github.com/bmiziura/olx-clone"
+        },
+        {
+          "header": "React Blog with Firebase",
+          "description": "React Blog is a web application project written in TypeScript with React and Firebase.",
+          "tags": ["TypeScript", "React.js", "Tailwind CSS", "Firebase"],
+
+          "demoLink": "https://react-firebase-blog-lyart.vercel.app",
+          "githubLink": "https://github.com/bmiziura/react-firebase-blog"
+        }
+      ]
+    },
+    "skills": {
+      "header": "Skillls",
+
+      "columns": [
+        {
+          "skills": [
+            "Good Communication and Team Work,",
+            "Independence and Good Time Management,",
+            "Good Work Organization,",
+            "Ingeniousness,",
+            "Ability to Work Under Time Pressure,"
+          ]
+        },
+        {
+          "skills": [
+            "Involvement in Projects,",
+            "Problem-solving Ability",
+            "Documentation Management,",
+            "Adaptability,",
+            "Fast learning"
+          ]
+        }
+      ]
+    },
+    "languages": {
+      "header": "Non-Native Languages",
+
+      "list": ["English - B1"]
+    }
+  }
+}

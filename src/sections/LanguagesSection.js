@@ -2,6 +2,7 @@ import { StyleSheet, View } from "@react-pdf/renderer"
 import React from "react"
 import List from "../components/List"
 import Section from "../components/Section"
+import { useLanguage } from "../MyDocument"
 
 const styles = StyleSheet.create({
   container: {
@@ -19,8 +20,10 @@ const styles = StyleSheet.create({
 })
 
 const LanguagesSection = () => {
+  const { language } = useLanguage()
+
   return (
-    <Section title="Języki obce">
+    <Section title={language.sections.languages.header}>
       <View style={styles.container}>
         <View style={styles.firstSection}></View>
         <View style={styles.secondSection}>

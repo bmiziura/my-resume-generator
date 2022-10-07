@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View } from "@react-pdf/renderer"
+import { Link, StyleSheet, Text, View } from "@react-pdf/renderer"
 import React from "react"
 import Section from "../components/Section"
+import { useLanguage } from "../MyDocument"
 
 const styles = StyleSheet.create({
   container: {
@@ -54,59 +55,53 @@ const styles = StyleSheet.create({
 
   demoText: {},
   githubText: {},
+
+  link: {
+    color: "#003d74",
+  },
 })
 
-const ProjectsSection = () => {
+const ProjectItem = ({ data }) => {
   return (
-    <Section title="Moje Projekty">
+    <View style={styles.projectContainer}>
+      <Text style={styles.header}>{data.header}</Text>
+      <Text style={styles.description}>{data.description}</Text>
+
+      <View style={styles.technologyList}>
+        {data.tags.map((tag, index) => (
+          <Text style={styles.technologyItem} key={index}>
+            {tag}
+          </Text>
+        ))}
+      </View>
+
+      <View style={styles.bottomContainer}>
+        <Text style={styles.demoText}>
+          Demo:{" "}
+          <Link src={data.demoLink}>
+            <Text style={styles.link}>{data.demoLink}</Text>
+          </Link>
+        </Text>
+        <Text style={styles.githubText}>
+          Github:{" "}
+          <Link src={data.githubLink}>
+            <Text style={styles.link}>{data.githubLink}</Text>
+          </Link>
+        </Text>
+      </View>
+    </View>
+  )
+}
+
+const ProjectsSection = () => {
+  const { language } = useLanguage()
+
+  return (
+    <Section title={language.sections.projects.header}>
       <View style={styles.container}>
-        <View style={styles.projectContainer}>
-          <Text style={styles.header}>Klon OLX.pl</Text>
-          <Text style={styles.description}>
-            Klon OLX.pl to projekt strony napisanej w TypeScript'cie przy użyciu
-            Next.JS (React).
-          </Text>
-
-          <View style={styles.technologyList}>
-            <Text style={styles.technologyItem}>TypeScript</Text>
-            <Text style={styles.technologyItem}>Next.JS (React)</Text>
-            <Text style={styles.technologyItem}>Tailwind CSS</Text>
-            <Text style={styles.technologyItem}>tRPC</Text>
-            <Text style={styles.technologyItem}>Prisma</Text>
-          </View>
-
-          <View style={styles.bottomContainer}>
-            <Text style={styles.demoText}>
-              Demo: https://olx-clone-nextjs.vercel.app
-            </Text>
-            <Text style={styles.githubText}>
-              Github: https://github.com/bmiziura/olx-clone
-            </Text>
-          </View>
-        </View>
-        <View style={styles.projectContainer}>
-          <Text style={styles.header}>Moja Strona (Portfolio)</Text>
-          <Text style={styles.description}>
-            Moja responsywna strona internetowa stworzona przy użyciu HTML, CSS,
-            JavaScript.
-          </Text>
-
-          <View style={styles.technologyList}>
-            <Text style={styles.technologyItem}>HTML</Text>
-            <Text style={styles.technologyItem}>JavaScript</Text>
-            <Text style={styles.technologyItem}>CSS</Text>
-            <Text style={styles.technologyItem}>Swiper.js</Text>
-          </View>
-
-          <View style={styles.bottomContainer}>
-            <Text style={styles.demoText}>
-              Demo: https://bmiziura.github.io/
-            </Text>
-            <Text style={styles.githubText}>
-              Github: https://github.com/bmiziura/bmiziura.github.io
-            </Text>
-          </View>
-        </View>
+        {language.sections.projects.list.map((data, index) => (
+          <ProjectItem key={index} data={data} />
+        ))}
       </View>
     </Section>
   )

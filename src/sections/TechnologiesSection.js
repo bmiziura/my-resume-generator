@@ -3,6 +3,8 @@ import React from "react"
 import List from "../components/List"
 import Section from "../components/Section"
 
+import { useLanguage } from "../MyDocument"
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
@@ -29,29 +31,16 @@ const TechnologyList = ({ title, children }) => {
 }
 
 const TechnologiesSection = () => {
+  const { language } = useLanguage()
+
   return (
-    <Section title="Technologie">
+    <Section title={language.sections.technologies.header}>
       <View style={styles.container}>
-        <TechnologyList title="Front-End">
-          <List
-            text={[
-              "React (Next.JS)",
-              "JavaScript / TypeScript",
-              "HTML",
-              "CSS / Tailwind CSS",
-            ]}
-          />
-        </TechnologyList>
-        <TechnologyList title="Back-End">
-          <List
-            text={[
-              "Java",
-              "Spring (RestAPI, Data, Security)",
-              "Maven / Gradle",
-              "Bazy danych: MySQL, MongoDB oraz Redis",
-            ]}
-          />
-        </TechnologyList>
+        {language.sections.technologies.columns.map((column, index) => (
+          <TechnologyList key={index} title={column.header}>
+            <List text={column.list} />
+          </TechnologyList>
+        ))}
       </View>
     </Section>
   )

@@ -1,0 +1,112 @@
+{
+  "header": {
+    "portfolio": "Portfolio: ",
+    "portfolioLink": "bmiziura.github.io",
+    "email": "Email: bartosz.miziura@o2.pl",
+    "phoneNumber": "Telefon: +48 695 452 798"
+  },
+
+  "sections": {
+    "experience": {
+      "header": "Doświadczenie",
+
+      "list": [
+        {
+          "date": "2020-03 - 2022-09",
+          "dateStamp": "(2 lata i 7 miesięcy)",
+
+          "header": "Java Developer i Zarządzanie serwerami Linux",
+          "companyName": "SOHP Marcin Szuksztul, Redy-Osada 10-100",
+
+          "list": [
+            "tworzenie, utrzymywanie i wdrażanie nowych funkcjonalności do aplikacji backendowej napisanej w Javie przy użyciu Springa i innych technologii,",
+            "zarządzanie serwerami na systemie Linux,",
+            "praca w małym zespole,",
+            "korzystanie z kontroli wersji (Git),",
+            "oraz korzystanie z bazy danych MongoDB & Redis."
+          ]
+        }
+      ]
+    },
+    "technologies": {
+      "header": "Technologie",
+
+      "columns": [
+        {
+          "header": "Front-End",
+          "list": [
+            "React (Next.js)",
+            "JavaScript / TypeScript",
+            "HTML",
+            "CSS / Tailwind CSS"
+          ]
+        },
+        {
+          "header": "Backend-End",
+          "list": [
+            "Java",
+            "Spring (Rest-Api, Data, Security)",
+            "Maven / Gradle",
+            "Bazy danych: MySQL, MongoDB oraz Redis"
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "header": "Moje Projekty",
+
+      "list": [
+        {
+          "header": "Klon OLX.pl",
+          "description": "Klon OLX.pl to projekt strony napisanej w TypeScript'cie przy użyciu Next.JS (React).",
+          "tags": [
+            "TypeScript",
+            "Next.js (React)",
+            "Tailwind CSS",
+            "tRPC",
+            "Prisma"
+          ],
+          "demoLink": "https://olx-clone-nextjs.vercel.app",
+          "githubLink": "https://github.com/bmiziura/olx-clone"
+        },
+        {
+          "header": "Blog w Reactcie z Firebase",
+          "description": "Aplikacja webowa napisana w TypeScriptcie przy użyciu Reacta i Firebase.",
+          "tags": ["TypeScript", "React.js", "Tailwind CSS", "Firebase"],
+
+          "demoLink": "https://react-firebase-blog-lyart.vercel.app",
+          "githubLink": "https://github.com/bmiziura/react-firebase-blog"
+        }
+      ]
+    },
+    "skills": {
+      "header": "Umiejętności",
+
+      "columns": [
+        {
+          "skills": [
+            "Komunikatywność i praca w zespole,",
+            "Samodzielność i dobre zarządzanie czasem,",
+            "Dobra organizacja pracy,",
+            "Pomysłowość,",
+            "Umiejętność pracy pod presją czasu,"
+          ]
+        },
+        {
+          "skills": [
+            "Zaangażowanie,",
+            "Zdolność rozwiązywania problemów,",
+            "Zarządzanie dokumentacją,",
+            "Zdolność adaptacji,",
+            "Umiejętność szybkiego uczenia się"
+          ]
+        }
+      ]
+    },
+    "languages": {
+      "header": "Języki obce",
+
+      "list": ["Angielski - B1"]
+    }
+  }
+}

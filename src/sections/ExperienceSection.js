@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "@react-pdf/renderer"
 import React from "react"
 import List from "../components/List"
 import Section from "../components/Section"
+import { useLanguage } from "../MyDocument"
 
 const styles = StyleSheet.create({
   container: {
@@ -39,35 +40,35 @@ const styles = StyleSheet.create({
   itemListContainer: {},
 })
 
-const ExperienceSection = () => {
+const ExperienceItem = ({ data }) => {
   return (
-    <Section title="Doświadczenie">
-      <View style={styles.container}>
-        <View style={styles.item}>
-          <View style={styles.firstSection}>
-            <Text style={styles.itemDate}>2020-03 - 2022-09</Text>
-            <Text style={styles.itemDateSmall}>(2 lata i 7 miesięcy)</Text>
-          </View>
-          <View style={styles.itemContent}>
-            <Text style={styles.itemHeader}>
-              Java Developer + Zarządzanie serwerami Linux
-            </Text>
-            <Text style={styles.itemCompany}>
-              SOHP Marcin Szuksztul, Redy-Osada 10-100
-            </Text>
-            <View style={styles.itemListContainer}>
-              <List
-                text={[
-                  "tworzenie, utrzymywanie i wdrażanie nowych funkcjonalności do aplikacji backendowej napisanej w Javie przy użyciu Springa i innych technologii,",
-                  "zarządzanie serwerami na systemie Linux,",
-                  "praca w małym zespole,",
-                  "korzystanie z kontroli wersji (Git),",
-                  "oraz korzystanie z bazy danych MongoDB & Redis.",
-                ]}
-              />
-            </View>
-          </View>
+    <View style={styles.item}>
+      <View style={styles.firstSection}>
+        <Text style={styles.itemDate}>{data.date}</Text>
+        <Text style={styles.itemDateSmall}>{data.dateStamp}</Text>
+      </View>
+      <View style={styles.itemContent}>
+        <Text style={styles.itemHeader}>{data.header}</Text>
+        <Text style={styles.itemCompany}>
+          SOHP Marcin Szuksztul, Redy-Osada 10-100
+        </Text>
+        <View style={styles.itemListContainer}>
+          <List text={data.list} />
         </View>
+      </View>
+    </View>
+  )
+}
+
+const ExperienceSection = () => {
+  const { language } = useLanguage()
+
+  return (
+    <Section title={language.sections.experience.header}>
+      <View style={styles.container}>
+        {language.sections.experience.list.map((data, index) => (
+          <ExperienceItem key={index} data={data} />
+        ))}
       </View>
     </Section>
   )
