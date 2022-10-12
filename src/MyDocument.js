@@ -8,6 +8,7 @@ import regularSans from "./fonts/OpenSans-Regular.ttf"
 import ExperienceSection from "./sections/ExperienceSection"
 import LanguagesSection from "./sections/LanguagesSection"
 import ProjectsSection from "./sections/ProjectsSection"
+import RodoSection from "./sections/RodoSection"
 import SkillsSection from "./sections/SkillsSection"
 import TechnologiesSection from "./sections/TechnologiesSection"
 
@@ -52,6 +53,7 @@ const MyDocument = ({ language }) => {
         <ProjectsSection />
         <SkillsSection />
         <LanguagesSection />
+        <RodoSection />
       </Page>
     </LanguageContext.Provider>
   )
